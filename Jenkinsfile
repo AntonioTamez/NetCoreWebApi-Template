@@ -1,5 +1,10 @@
 pipeline {
-    agent any
+     agent {
+        docker {
+            image 'mcr.microsoft.com/dotnet/sdk:8.0'
+            args '--user root'
+        }
+    }
     environment {
         DOTNET_VERSION = '8.0'
         IMAGE_NAME = 'netcore-api'
