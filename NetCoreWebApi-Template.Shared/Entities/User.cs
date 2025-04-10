@@ -22,5 +22,7 @@ namespace NetCoreWebApi_Template.Shared.Entities
 
         [Display(Name = "Usuario")]
         public string FullName => $"{FirstName} {LastName}";
+
+        public City? City { get; set; }
     }
 }
